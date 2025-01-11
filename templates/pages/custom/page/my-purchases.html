@@ -1,0 +1,56 @@
+---
+customer:
+    orders:
+        limit: 100
+---
+
+{{#partial "page"}}
+
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+<section class="page" id="my-purchases-page">
+    <div class="banner">
+        <img src="{{cdn 'img/sword-shield.png'}}" alt="Sword and Shield" class="banner-icon" />
+        <h1 class="banner-title">{{lang 'my_purchases.heading'}}</h1>
+    </div>
+    {{#if page.sub_pages}}
+    <nav class="navBar navBar--sub">
+        <ul class="navBar-section account-navigation">
+        {{#each page.sub_pages}}
+            <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+        {{/each}}
+        </ul>
+    </nav>
+    {{/if}}
+
+    {{{region name="page_builder_content"}}}
+
+    <div class="page-content page-content--centered">
+        {{#replace '%%Syndicate%%' page.content}}
+            {{> components/page/rss_feed}}
+        {{else}}
+            <p>{{{page.content}}}</p>
+        {{/replace}}
+    </div>
+
+    {{#if page.feed}}
+        <ul>
+            {{#each page.feed}}
+                <li>
+                    <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                    <p>{{content}}</p>
+                </li>
+            {{/each}}
+        </ul>
+    {{/if}}
+
+    {{{region name="my_pucharses_above_customer_orders"}}}
+    {{#if customer.orders}}
+        {{> components/account/my-purchases-list orders=customer.orders}}
+    {{/if}}
+    {{{region name="my_pucharses_below_customer_orders"}}}
+</section>
+
+{{/partial}}
+
+{{> layout/base}}

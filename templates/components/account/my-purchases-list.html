@@ -1,0 +1,5 @@
+<ul class="productGrid" id="my-purchases-list">
+    {{#each orders}}
+        {{> components/account/my-purchases-item-list order_items=items}}
+    {{/each}}
+</ul>

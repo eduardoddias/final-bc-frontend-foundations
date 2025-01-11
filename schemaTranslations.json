@@ -985,6 +985,36 @@
     "no": "Vis produkter i en liste",
     "ko": "리스트에 상품 표시"
   },
+  "i18n.MyPurchases": {
+    "default": "My Purchases"
+  },
+  "i18n.MyPurchasesOrderLimit": {
+    "default": "Home order limit"
+  },
+  "i18n.MyPurchasesBannerFontFamily": {
+    "default": "Banner font family"
+  },
+  "i18n.MyPurchasesBannerFontSize": {
+    "default": "Banner font size"
+  },
+  "i18n.MyPurchasesBannerTextColor": {
+    "default": "Banner text color"
+  },
+  "i18n.MyPurchasesBannerBgColor": {
+    "default": "Banner background color"
+  },
+  "i18n.MyPurchasesProductNameFontFamily": {
+    "default": "Product name font family"
+  },
+  "i18n.MyPurchasesProductNameTextColor": {
+    "default": "Product name text color"
+  },
+  "i18n.MyPurchasesProductImageDimension": {
+    "default": "Product Image Dimension"
+  },
+  "i18n.MyPurchasesProductImageFallbackDimension": {
+    "default": "Product Placeholder Image Dimension"
+  },
   "i18n.Blog": {
     "default": "Blog",
     "fr": "Blog",

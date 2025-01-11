@@ -1,0 +1,46 @@
+{{#each order_items}}
+    {{#contains name 'Sample'}}
+        {{!-- Note: unless was not working with contains --}}
+    {{else}}
+        {{#unless type '==' 'giftcertificate'}}
+            <li class="product my-purchases-product my-purchases-product-sku-{{trim (hyphenate name)}}">
+                <article
+                    class="card
+                    {{#if alternate}} card--alternate{{/if}}"
+                    data-test="card-{{../id}}"
+                >
+                    <figure class="card-figure">
+                        <div class="card-figure__link" aria-label="{{> components/products/product-info}}">
+                            <div class="card-img-container">
+                                {{> components/common/responsive-img
+                                    image=image
+                                    class="card-image"
+                                    lazyload="lazyload+lqip"
+                                    fallback_size=../theme_settings.my_purchases_product_fallback_size
+                                    default_image=../theme_settings.default_image_product
+                                    lqip_size=../theme_settings.my_purchases_product_size
+                                }}
+                            </div>
+                        </div>
+                        <h3 class="card-title">                        
+                            {{#any type '==' 'physical' type '==' 'digital'}}
+                                <span class="icon" title="{{#if type '==' 'physical'}}{{lang 'my_purchases.product.physical'}}{{else type '==' 'digital'}}{{lang 'my_purchases.product.digital'}}{{/if}}">
+                                    <svg><use href="#icon-product-{{type}}"  /></svg>
+                                </span>
+                            {{/any}}
+                            {{name}}
+                        </h3>
+                        <div>
+                            <span>{{lang 'my_purchases.order_number'}}</span>
+                            <a aria-label="{{> components/products/product-info}}"
+                                href="{{../details_url}}"
+                                {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}}
+                            >#{{../id}}</a>
+                        </div>
+                        <div><span>{{lang 'my_purchases.purchase_date'}}</span> {{../date}}</div>
+                    </figure>
+                </article>
+            </li>
+        {{/unless}}
+    {{/contains}}
+{{/each}}

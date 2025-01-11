@@ -1,0 +1,15 @@
+// =============================================================================
+// My Purchases (Settings)
+// =============================================================================
+
+// Banner
+$myPurchases-banner-fontFamily: stencilFontFamily('my_purchases_banner_font_family'), Arial, Helvetica, sans-serif;
+$myPurchases-banner-fontWeight: stencilFontWeight('my_purchases_banner_font_family');
+$myPurchases-banner-fontSize: stencilNumber('my_purchases_banner_font_size');
+$myPurchases-banner-textColor: stencilColor('my_purchases_banner_text_color');
+$myPurchases-banner-bgColor: stencilColor('my_purchases_banner_bg_color');
+
+// Products
+$myPurchases-product-fontFamily: stencilFontFamily('my_purchases_product_name_font_family'), Arial, Helvetica, sans-serif;
+$myPurchases-product-fontWeight: stencilFontWeight('my_purchases_product_name_font_family');
+$myPurchases-product-textColor: stencilColor('my_purchases_product_text_color');

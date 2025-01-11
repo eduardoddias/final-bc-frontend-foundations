@@ -1189,6 +1189,206 @@
     "settings": [
       {
         "type": "heading",
+        "content": "i18n.MyPurchases"
+      },
+      {
+        "type": "select",
+        "label": "i18n.MyPurchasesOrderLimit",
+        "id": "homepage_my_purchases_order_count",
+        "force_reload": true,
+        "options": [
+          {
+            "value": 2,
+            "label": "2"
+          },
+          {
+            "value": 5,
+            "label": "5"
+          },
+          {
+            "value": 10,
+            "label": "10"
+          },
+          {
+            "value": 20,
+            "label": "20"
+          }
+        ]
+      },
+      {
+        "type": "font",
+        "label": "i18n.MyPurchasesBannerFontFamily",
+        "id": "my_purchases_banner_font_family",
+        "options": [
+          {
+            "group": "i18n.OpenSans",
+            "label": "i18n.OpenSans",
+            "value": "Google_Open+Sans_400"
+          },
+          {
+            "group": "i18n.OpenSans",
+            "label": "i18n.OpenSansBold",
+            "value": "Google_Open+Sans_700"
+          },
+          {
+            "group": "i18n.Montserrat",
+            "label": "i18n.MontserratLight",
+            "value": "Google_Montserrat_400"
+          },
+          {
+            "group": "i18n.Montserrat",
+            "label": "i18n.MontserratBold",
+            "value": "Google_Montserrat_700"
+          },
+          {
+            "group": "i18n.Karla",
+            "label": "i18n.Karla",
+            "value": "Google_Karla_400"
+          },
+          {
+            "group": "i18n.Roboto",
+            "label": "i18n.Roboto",
+            "value": "Google_Roboto_400"
+          },
+          {
+            "group": "i18n.SourceSansPro",
+            "label": "i18n.SourceSansPro",
+            "value": "Google_Source+Sans+Pro_400"
+          },
+          {
+            "group": "i18n.Volkhov",
+            "label": "i18n.Volkhov",
+            "value": "Google_Volkhov_400"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "label": "i18n.MyPurchasesBannerFontSize",
+        "id": "my_purchases_banner_font_size",
+        "options": [
+          {
+            "value": 16,
+            "label": "16px"
+          },
+          {
+            "value": 18,
+            "label": "18px"
+          },
+          {
+            "value": 22,
+            "label": "22px"
+          },
+          {
+            "value": 28,
+            "label": "28px"
+          },
+          {
+            "value": 36,
+            "label": "36px"
+          },
+          {
+            "value": 42,
+            "label": "42px"
+          }
+        ]
+      },
+      {
+        "type": "color",
+        "label": "i18n.MyPurchasesBannerTextColor",
+        "id": "my_purchases_banner_text_color"
+      },
+      {
+        "type": "color",
+        "label": "i18n.MyPurchasesBannerBgColor",
+        "id": "my_purchases_banner_bg_color"
+      },
+      {
+        "type": "font",
+        "label": "i18n.MyPurchasesProductNameFontFamily",
+        "id": "my_purchases_product_name_font_family",
+        "options": [
+          {
+            "group": "i18n.OpenSans",
+            "label": "i18n.OpenSans",
+            "value": "Google_Open+Sans_400"
+          },
+          {
+            "group": "i18n.OpenSans",
+            "label": "i18n.OpenSansBold",
+            "value": "Google_Open+Sans_700"
+          },
+          {
+            "group": "i18n.Montserrat",
+            "label": "i18n.MontserratLight",
+            "value": "Google_Montserrat_400"
+          },
+          {
+            "group": "i18n.Montserrat",
+            "label": "i18n.MontserratBold",
+            "value": "Google_Montserrat_700"
+          },
+          {
+            "group": "i18n.Karla",
+            "label": "i18n.Karla",
+            "value": "Google_Karla_400"
+          },
+          {
+            "group": "i18n.Roboto",
+            "label": "i18n.Roboto",
+            "value": "Google_Roboto_400"
+          },
+          {
+            "group": "i18n.SourceSansPro",
+            "label": "i18n.SourceSansPro",
+            "value": "Google_Source+Sans+Pro_400"
+          },
+          {
+            "group": "i18n.Volkhov",
+            "label": "i18n.Volkhov",
+            "value": "Google_Volkhov_400"
+          }
+        ]
+      },
+      {
+        "type": "color",
+        "label": "i18n.MyPurchasesProductNameTextColor",
+        "id": "my_purchases_product_text_color"
+      },
+      {
+        "type": "imageDimension",
+        "label": "i18n.MyPurchasesProductImageDimension",
+        "id": "my_purchases_product_size",
+        "force_reload": true,
+        "options": [
+          {
+            "value": "300x300",
+            "label": "i18n.OptimizedForTheme"
+          },
+          {
+            "value": "custom",
+            "label": "i18n.SpecifyDimensions"
+          }
+        ]
+      },
+      {
+        "type": "imageDimension",
+        "label": "i18n.MyPurchasesProductImageFallbackDimension",
+        "id": "my_purchases_product_fallback_size",
+        "force_reload": true,
+        "options": [
+          {
+            "value": "100w",
+            "label": "i18n.OptimizedForTheme"
+          },
+          {
+            "value": "custom",
+            "label": "i18n.SpecifyDimensions"
+          }
+        ]
+      },
+      {
+        "type": "heading",
         "content": "i18n.ProductSaleBadges"
       },
       {

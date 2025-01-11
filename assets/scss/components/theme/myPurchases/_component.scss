@@ -1,0 +1,33 @@
+// =============================================================================
+// My Purchases
+// =============================================================================
+
+// Custom Page
+#my-purchases-page {
+    .banner {
+        padding: spacing("half");
+        gap: spacing("base");
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $myPurchases-banner-bgColor;
+        h1.banner-title {
+            color: $myPurchases-banner-textColor;
+            font-family: $myPurchases-banner-fontFamily;
+            font-weight: $myPurchases-banner-fontWeight;
+            font-size: $myPurchases-banner-fontSize;
+        }
+    }
+}
+
+// Component Listing
+#my-purchases-list {
+    display: none;
+
+    .card-title {
+        color: $myPurchases-product-textColor;
+        font-family: $myPurchases-product-fontFamily;
+        font-weight: $myPurchases-product-fontWeight;
+        margin-bottom: spacing("half");
+    }
+}

@@ -4,6 +4,7 @@ import Global from './theme/global';
 
 const getAccount = () => import('./theme/account');
 const getLogin = () => import('./theme/auth');
+const myPurchases = () => import('./theme/custom/page/my-purchases')
 const noop = null;
 
 const pageClasses = {
@@ -40,7 +41,7 @@ const pageClasses = {
     giftcertificates: () => import('./theme/gift-certificate'),
     giftcertificates_balance: () => import('./theme/gift-certificate'),
     giftcertificates_redeem: () => import('./theme/gift-certificate'),
-    default: noop,
+    default: myPurchases,
     page: noop,
     product: () => import('./theme/product'),
     amp_product_options: () => import('./theme/product'),
@@ -52,7 +53,10 @@ const pageClasses = {
     wishlists: () => import('./theme/wishlist'),
 };
 
-const customClasses = {};
+const customClasses = {
+    'pages/custom/page/my-purchases': myPurchases,
+    'pages\\custom\\page\\my-purchases': myPurchases
+};
 
 /**
  * This function gets added to the global window and then called

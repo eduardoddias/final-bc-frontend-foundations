@@ -10,6 +10,9 @@ carousel: {{theme_settings.homepage_show_carousel}}
 blog:
     recent_posts:
         limit: {{theme_settings.homepage_blog_posts_count}}
+customer:
+    orders:
+        limit: {{theme_settings.homepage_my_purchases_order_count}}
 ---
 {{#partial "hero"}}
     {{{region name="home_below_menu"}}}
@@ -26,6 +29,14 @@ blog:
     {{/each}}
 
 <div class="main full">
+    <div id="home_my_purchases">
+        {{#if customer.orders}}
+            <h2 class="page-heading">{{lang 'home.my_purchases'}}</h2>
+            {{> components/account/my-purchases-list orders=customer.orders}}
+        {{/if}}
+    </div>
+    {{{region name="home_below_customer_orders"}}}
+
     {{#if products.featured}}
         {{> components/products/featured products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
     {{/if}}
